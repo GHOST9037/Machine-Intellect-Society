@@ -1,0 +1,258 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: white;
+}
+/* Title Hover Animation */
+h1 {
+    display: inline-block;
+    transition: transform 0.4s ease-in-out, letter-spacing 0.4s ease-in-out, text-shadow 0.4s ease-in-out;
+}
+
+h1:hover {
+    transform: scale(1.1);
+    letter-spacing: 2px;
+    text-shadow: 0 0 15px rgba(0, 255, 255, 0.8), 0 0 30px rgba(0, 255, 255, 0.5);
+}
+
+/* Header */
+header {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Header Layout */
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px 20px;
+    position: relative;
+}
+
+/* Logo on the extreme left */
+.logo {
+    width: 120px;
+    height: auto;
+    margin-left: 20px;
+}
+
+/* Title in center */
+.title {
+    flex-grow: 1;
+    text-align: center;
+}
+
+/* Hamburger Menu on the extreme right */
+.hamburger {
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+    position: relative;
+    z-index: 2;
+}
+
+/* Navigation Menu (Hidden by Default) */
+.nav-menu {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    transition: right 0.4s ease-in-out;
+    padding-top: 60px;
+}
+
+/* Show Menu */
+.nav-menu.active {
+    right: 0;
+}
+
+/* Desktop Menu on the Right */
+@media (min-width: 768px) {
+    .nav-menu {
+        position: relative;
+        right: 0;
+        width: auto;
+        height: auto;
+        background: transparent;
+        backdrop-filter: none;
+        padding-top: 0;
+    }
+    
+    .nav-menu ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;  /* Always stack items vertically */
+        gap: 15px;
+        text-align: center;
+    }
+    
+
+    .nav-menu li {
+        padding: 0;
+    }
+}
+
+
+/* Navigation Menu (Hidden by Default) */
+.nav-menu {
+    position: fixed;
+    top: 0;
+    right: -250px; /* Starts off-screen */
+    width: 250px;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    transition: right 0.4s ease-in-out;
+    padding-top: 60px;
+}
+
+/* Navigation Links */
+.nav-menu ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.nav-menu li {
+    padding: 15px 0;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+    color: #ffcc00;
+}
+
+/* Show Menu */
+.nav-menu.active {
+    right: 0;
+}
+
+
+
+.title-container {
+    text-align: left;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .logo {
+        margin-bottom: 10px;
+    }
+}
+
+
+/* Logo */
+.logo {
+    width: 120px;
+    height: auto;
+    margin-bottom: 10px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Glassmorphism Card */
+.glass-card {
+    margin: 20px auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 600px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover Animation */
+.glass-card:hover {
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    margin-top: 20px;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+/* Links */
+a {
+    color: #61dafb;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+    color: #ffcc00;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.event-item {
+    padding: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    list-style: none;
+    font-size: 18px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.event-item:hover {
+    transform: scale(1.05);
+    color: #ffcc00;
+}
+/* About Section */
+.about-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    text-align: center;
+}
+
+.mission, .vision {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Animation for Mission */
+.mission:hover {
+    transform: translateX(-5px) scale(1.05);
+    box-shadow: 0 4px 15px rgba(15, 15, 15, 0.6);
+}
+
+/* Animation for Vision */
+.vision:hover {
+    transform: translateX(5px) scale(1.05);
+    box-shadow: 0 4px 15px rgba(15, 15, 15, 0.6);
+}
